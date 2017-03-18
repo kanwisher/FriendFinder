@@ -1,0 +1,24 @@
+{
+  "name": "lowered_expectations",
+  "version": "1.0.0",
+  "description": "Dating site matching desperate singles",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanwisher/FriendFinder.git"
+  },
+  "author": "David Kanwisher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kanwisher/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/kanwisher/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}

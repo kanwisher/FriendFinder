@@ -1,0 +1,153 @@
+body {
+    background-color: black;
+}
+
+
+/* Heading and Logo */
+
+.homePosition {
+    width: 100%;
+    cursor: default;
+    position: absolute;
+    top: 25%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.surveyPosition {
+  margin-left: 25px;
+}
+
+#logo1,
+#logo2 {
+    font-family: virtucorp;
+    font-size: 110px;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(34, 34, 34, 0.65);
+    opacity: .95;
+    /*text-align: center;*/
+}
+
+#logo2 {
+    margin-left: 120px;
+    margin-bottom: -20px;
+}
+
+.imgcontainer {
+    position: relative;
+    display: inline-block;
+    width: 179px;
+    height: 127px;
+    top: 40px;
+}
+
+#hearts {
+    margin-left: 25px;
+    width: 110px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    animation: heartbeat 1s 3;
+    /* run the heartbeat keyframe animation, make the entire animation take 1s to run, display the animation 3 times */
+    cursor: pointer;
+}
+
+
+#rectangle {
+    position: absolute;
+    height: 115px;
+    margin-left: 10px;
+    display: block;
+}
+
+#surveyButton {
+   position: relative;
+    left: 55%;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #62CC14;
+    margin-top: 50px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(34, 34, 34, 0.65);
+  }
+   
+
+#trial {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-family: arial;
+    font-weight: bold;
+    color: white;
+}
+
+#surveyButton:hover {
+    background-color: #74CC36;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    }
+
+footer a {
+    color: white;
+    opacity: .7;
+    font-size: 20px;
+    font-family: calibri;
+    text-decoration: none;
+}
+}
+
+/* added features */
+
+@font-face {
+    font-family: virtucorp;
+    src: url("Virtucorp.otf");
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale( 1);
+    }
+    20%{ /* when animation is 20% complete, make the below change, and so on */
+        transform: scale( 1.25);
+    }
+    40% {
+        transform: scale( 1);
+    }
+    60% {
+        transform: scale( 1.25);
+    }
+    80% {
+        transform: scale( 1);
+    }
+    100% {
+        transform: scale( 1);
+    }
+}
+
+video#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    opacity: .38;
+    z-index: -10000000000000;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: black no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lowered Expectations</title>
+	<link rel="shortcut icon" href="./favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/styleHome.css">
+</head>
+<body>
+
+<video playsinline autoplay muted loop id="bgvid">
+    
+    <source src="benchvideo.mp4" type="video/mp4">
+</video>
+
+
+<audio id="jingle">
+  
+  <source src="loweredexp.mp3" type="audio/mpeg">
+  
+</audio>
+
+
+
+
+
+<div id="heading" class="homePosition">
+	<div id="logo1">Lowered<div class="imgcontainer"><img id="rectangle" src="rectangle.png"><img id="hearts" src="hearts.svg"/></div></div>
+	<div id="logo2">Expectations</div>
+	<a href="/survey.html"><div id="surveyButton"><span id="trial">START YOUR FREE TRIAL</span></div></a>
+</div>
+
+
+<footer><a href="https://github.com/kanwisher/FriendFinder">GitHub </a> | <a href="/api/friends"> All Matches</a></footer>
+
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.2.0.js"
+  integrity="sha256-wPFJNIFlVY49B+CuAIrDr932XSb6Jk3J1M22M3E2ylQ="
+  crossorigin="anonymous"></script>
+
+
+
+<script>
+
+$("#hearts").on("click", function(){
+	$("#jingle").prop("volume", 0.3);
+	$('#jingle').get(0).play();
+});
+
+
+
+
+</script>
+
+</body>
+</html>

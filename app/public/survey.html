@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lowered Expectations</title>
+	<link rel="shortcut icon" href="./favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/styleSurvey.css">
+</head>
+<body>
+<div class="content">
+	<h2 class="bounceIn animated">What is your name?</h2>
+	<input type="text" name="name" id="name" class="bounceIn animated style-1">
+	<h2>Submit a link to a photo of yourself</h2>
+	<input type="text" name="picURL" id="picURL" class="style-1">
+
+	<h2 class="header1">Question 1</h2>
+		<h3>Do you enjoy music and dancing?</h3>
+	 	<select  id="Q1" class="custom-dropdown">	 	
+            <option selected value="1">1 (No, hate it all)</option>
+            <option value="2">2</option>
+            <option value="3">3 (It's alright)</option>
+            <option value="4">4</option>
+            <option value="5">5 (Yes, Love it)</option>
+      	</select>
+
+     <h2 class="header2">Question 2</h2>
+		<h3>How much do you like to read?</h3>
+	 	<select  id="Q2" class="custom-dropdown">	 	
+            <option selected value="1">1 (I hate reading)</option>
+            <option value="2">2</option>
+            <option value="3">3 (It's alright)</option>
+            <option value="4">4</option>
+            <option value="5">5 (Yes, Love it)</option>
+      	</select>
+	<h2 class="header3">Question 3</h2>
+		<h3>How spiritual are you?</h3>
+	 	<select  id="Q3" class="custom-dropdown">	 	
+            <option selected value="1">1 (Not at all)</option>
+            <option value="2">2</option>
+            <option value="3">3 (Not too strong either way)</option>
+            <option value="4">4</option>
+            <option value="5">5 (Very!)</option>
+      	</select>
+
+	<h2 class="header4">Question 4</h2>
+		<h3>Do you like animals?</h3>
+	 	<select  id="Q4" class="custom-dropdown">	 	
+            <option selected value="1">1 (No!)</option>
+            <option value="2">2</option>
+            <option value="3">3 (it depends)</option>
+            <option value="4">4</option>
+            <option value="5">5 (Yes, love them all)</option>
+      	</select>
+	<h2 class="header5">Question 5</h2>
+		<h3>Do you want children?</h3>
+	 	<select  id="Q5" class="custom-dropdown">	 	
+            <option selected value="1">1 (No, absolutely no kids)</option>
+            <option value="2">2</option>
+            <option value="3">3 (Maybe)</option>
+            <option value="4">4</option>
+            <option value="5">5 (Yes, for sure!)</option>
+      	</select>
+	<h2 class="header6">Question 6</h2>
+		<h3>Do you smoke?</h3>
+	 	<select  id="Q6" class="custom-dropdown">	 	
+            <option selected value="1">1 (No, gross)</option>
+            <option value="2">2</option>
+            <option value="3">3 (Socially)</option>
+            <option value="4">4</option>
+            <option value="5">5 (All the time!)</option>
+      	</select>
+	<h2 class="header7">Question 7</h2>
+		<h3>Do you like to exercise?</h3>
+	 	<select  id="Q7" class="custom-dropdown">	 	
+            <option selected value="1">1 (What's that?)</option>
+            <option value="2">2</option>
+            <option value="3">3 (Sometimes)</option>
+            <option value="4">4</option>
+            <option value="5">5 (All the time!)</option>
+      	</select>
+	<h2 class="header8">Question 8</h2>
+			<h3>Do you watch a lot of TV?</h3>
+		 	<select  id="Q8" class="custom-dropdown">	 	
+	            <option selected value="1">1 (I never watch television)</option>
+	            <option value="2">2</option>
+	            <option value="3">3 (Sometimes)</option>
+	            <option value="4">4</option>
+	            <option value="5">5 (Yes, for hours a day)</option>
+	      	</select>
+	<h2 class="header9">Question 9</h2>
+			<h3>Are you good at saving money?</h3>
+		 	<select  id="Q9" class="custom-dropdown">	 	
+	            <option selected value="1">1 (No, I'm always in debt)</option>
+	            <option value="2">2</option>
+	            <option value="3">3 (Depends on what I'm saving for)</option>
+	            <option value="4">4</option>
+	            <option value="5">5 (Yes, I'm the best saver)</option>
+	      	</select>
+	<h2 class="header10">Question 10</h2>
+			<h3>Do you prefer coffee or milkshakes?</h3>
+		 	<select  id="Q10" class="custom-dropdown">	 	
+	            <option selected value="1">1 (Coffee for sure!)</option>
+	            <option value="2">2</option>
+	            <option value="3">3 (No preference);</option>
+	            <option value="4">4</option>
+	            <option value="5">5 (Definitely milkshakes!)</option>
+	      	</select>
+
+<div id="surveyButton"><span id="trial"><em>Find My Match!</em></span></div>
+
+</div>
+
+<div id="modal-background"></div>
+<div id="modal-content">
+    
+</div>
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.2.0.js"
+  integrity="sha256-wPFJNIFlVY49B+CuAIrDr932XSb6Jk3J1M22M3E2ylQ="
+  crossorigin="anonymous"></script>
+
+<script>
+
+$("#surveyButton").click(function () {
+		$("#modal-content,#modal-background").fadeIn();
+		$("#modal-content,#modal-background").toggleClass("active");
+
+	});
+
+$("#modal-background").click(function () {
+		$(location).attr('href', '/');
+
+	});
+
+
+
+
+
+
+$("input").on("focusout", function(){
+	$('html, body').animate({
+	    scrollTop: $(this).next().offset().top - 300
+	}, 700);
+
+});
+
+$("select").on("change", function() {
+	$('html, body').animate({
+	    scrollTop: $(this).next().offset().top - 300
+	}, 700);
+});
+
+
+
+$("#surveyButton").on("click", function(){
+	let newFriend = 
+	{
+		name: $("#name").val(),
+		photo: $("#picURL").val(),
+		scores: [$("#Q1").val(),$("#Q2").val(),$("#Q3").val(),$("#Q4").val(),$("#Q5").val(),$("#Q6").val(),$("#Q7").val(),$("#Q8").val(),$("#Q9").val(),$("#Q10").val()]
+	};
+	console.log(newFriend);
+	$.post("/api/new", newFriend, function(data, status){
+		console.log(newFriend);
+		console.log(data);
+		console.log(status);
+	});
+
+});
+
+</script>
+</body>
+</html>
