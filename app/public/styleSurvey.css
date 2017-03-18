@@ -115,15 +115,6 @@ button {
         -webkit-transform: scale3d(.9, .9, .9);
         transform: scale3d(.9, .9, .9);
     }
-    60% {
-        opacity: 1;
-        -webkit-transform: scale3d(1.03, 1.03, 1.03);
-        transform: scale3d(1.03, 1.03, 1.03);
-    }
-    80% {
-        -webkit-transform: scale3d(.97, .97, .97);
-        transform: scale3d(.97, .97, .97);
-    }
     to {
         opacity: 1;
         -webkit-transform: scale3d(1, 1, 1);
@@ -178,8 +169,7 @@ button {
         -moz-box-shadow: 0 0 20px 0 #222;
         display: none;
         height: 600px;
-        left: 50%;
-      
+        left: 50%;      
         padding: 10px;
         position: fixed;
         top: 50%;
@@ -192,3 +182,27 @@ button {
 #modal-background.active, #modal-content.active {
         display: block;
     }
+
+
+#matchInfo {
+
+	height: 500px;
+	width: 700px;
+	background: red;
+	margin: auto;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+#matchImage {
+
+}
+
+
+#matchBio {
+	
+}
+
+	
+

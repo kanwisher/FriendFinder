@@ -11,9 +11,20 @@ res.json(friends);
 
 
 app.post("/api/new", function(req, res){
-	console.log(req.body);
+let arrayTest = [];
+
+friends.forEach(function(value){
+	let difference = 0;
+	for(let i = 0; i < value.scores.length; i ++){
+		difference += Math.abs(value.scores[i] - req.body.scores[i]);
+	}
+	arrayTest.push(difference);
+	
+});
+	let bestMatch = friends[arrayTest.indexOf(Math.min(...arrayTest))];	
+	console.log(bestMatch);
 	friends.push(req.body);
-	res.end("hello");
+	res.send(bestMatch);
 
 });
 

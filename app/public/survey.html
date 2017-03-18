@@ -111,6 +111,11 @@
 
 <div id="modal-background"></div>
 <div id="modal-content">
+
+<div id="matchInfo">
+	<div id="matchImage"></div>
+	<div id="matchBio"></div>
+</div>
     
 </div>
 
@@ -164,7 +169,8 @@ $("#surveyButton").on("click", function(){
 	};
 	console.log(newFriend);
 	$.post("/api/new", newFriend, function(data, status){
-		console.log(newFriend);
+
+		$("#matchImage").append(newFriend.name);
 		console.log(data);
 		console.log(status);
 	});
