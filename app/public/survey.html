@@ -10,13 +10,16 @@
 <div class="content">
 	<h2 class="bounceIn animated">What is your name?</h2>
 	<input type="text" name="name" id="name" class="bounceIn animated style-1" pattern="[a-z[A-Z]{2,20}" oninvalid="this.setCustomValidity('I\'m just looking for your name...')" required>
+	<span class="nextButton1">NEXT</span>
 
 
 	<h2>Submit a link to a photo of yourself</h2>
 	<input type="text" name="picURL" id="picURL" class="style-1" pattern ="^.*\.(gif|jpe?g|tiff|png|bmp)$" oninvalid="this.setCustomValidity('Your HTML link needs to end with an image file type, like .jpeg!')" required>
+	<span class="nextButton2">NEXT</span>
 
 	<h2>Tell us a little about yourself</h2>
-	<textarea id="bio" name="message" rows="5" cols="70" pattern ="^[0-9A-Za-z!@\.;:\'?-]{1,150}$" oninvalid="this.setCustomValidity('Don\'t be shy!')" required></textarea>
+	<textarea id="bio" name="message" rows="5" cols="70" pattern ="^[0-9A-Za-z!@\.;:\'?-]{1,150}$" oninvalid="this.setCustomValidity('Don\'t be shy!')" required></textarea><span class="nextButton3">NEXT</span>
+
 
 	<h2 class="header1">Question 1</h2>
 		<h3>Do you enjoy music and dancing?</h3>
@@ -158,6 +161,30 @@ $("#modal-background").click(function () {
 		$(location).attr('href', '/');
 	});
 
+
+$("#name").one("click", function(){
+	$(".nextButton1").css('visibility','visible').hide().fadeIn(2000);
+
+	
+});
+
+$("#picURL").one("click", function(){
+	$(".nextButton2").css('visibility','visible').hide().fadeIn(2000);
+
+	
+});
+
+$("#bio").one("click", function(){
+	$(".nextButton3").css('visibility','visible').hide().fadeIn(2000);
+
+	
+});
+
+$("span").on("click", function() {
+	$('html, body').animate({
+	    scrollTop: $(this).next().offset().top - 300
+	}, 700);
+});
 
 		
 
