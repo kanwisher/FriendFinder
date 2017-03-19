@@ -9,16 +9,16 @@
 <form action="" method="" id="form1">
 <div class="content">
 	<h2 class="bounceIn animated">What is your name?</h2>
-	<input type="text" name="name" id="name" class="bounceIn animated style-1" pattern="[a-z[A-Z]{2,20}" oninvalid="this.setCustomValidity('I\'m just looking for your name...')" required>
+	<input type="text" name="name" id="name" class="bounceIn animated style-1" pattern="[a-z[A-Z]{2,20}" required>
 	<span class="nextButton1">NEXT</span>
 
 
 	<h2>Submit a link to a photo of yourself</h2>
-	<input type="text" name="picURL" id="picURL" class="style-1" pattern ="^.*\.(gif|jpe?g|tiff|png|bmp)$" oninvalid="this.setCustomValidity('Your HTML link needs to end with an image file type, like .jpeg!')" required>
+	<input type="text" name="picURL" id="picURL" class="style-1" pattern ="^.*\.(gif|jpe?g|tiff|png|bmp)$"  required>
 	<span class="nextButton2">NEXT</span>
 
 	<h2>Tell us a little about yourself</h2>
-	<textarea id="bio" name="message" rows="5" cols="70" pattern ="^[0-9A-Za-z!@\.;:\'?-]{1,150}$" oninvalid="this.setCustomValidity('Don\'t be shy!')" required></textarea><span class="nextButton3">NEXT</span>
+	<textarea id="bio" name="message" rows="5" cols="70" pattern ="^[0-9A-Za-z!@\.;:\'?-]{1,150}$" required></textarea><span class="nextButton3">NEXT</span>
 
 
 	<h2 class="header1">Question 1</h2>
@@ -124,7 +124,7 @@
 	            <option value="5">5 (Definitely milkshakes!)</option>
 	      	</select>
 
-<button type="submit" form="form1" id="surveyButton"><span id="trial"><em>Find My Match!</em></span></button>
+<button type="submit" id="surveyButton"><span id="trial"><em>Find My Match!</em></span></button>
 </form>
 </div>
 
@@ -189,12 +189,10 @@ $("span").on("click", function() {
 		
 
 
-$("#form1").on("submit", function(event){
+$("#form1").on('submit', function(event){
+
 
 event.preventDefault();
-
-
-
 
 		let newFriend = 
 		{
@@ -220,9 +218,11 @@ event.preventDefault();
 		$("#modal-content,#modal-background").fadeIn();
 		$("#modal-content,#modal-background").toggleClass("active");
 
+	
+return false;
+});
 
 
-	});
 
 
 
