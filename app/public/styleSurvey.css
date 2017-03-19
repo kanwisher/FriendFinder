@@ -16,11 +16,12 @@ body {
     font-size: 50px;
 }
 
-input {
-    margin-bottom: 350px;
+textarea {
+
+    resize: none;
 }
 
-h2 {
+h2:nth-of-type(n + 5) {
     margin-top: 350px;
 }
 
@@ -176,6 +177,8 @@ button {
         width: 800px;
         z-index: 1000;
         transform: translate(-50%, -50%);
+        color: black;
+        border: solid black;
     }
 
 
@@ -188,21 +191,26 @@ button {
 
 	height: 500px;
 	width: 700px;
-	background: red;
+	background: white;
 	margin: auto;
 	position: relative;
   	top: 50%;
   	transform: translateY(-50%);
 }
 
-#matchImage {
-
-}
 
 
 #matchBio {
-	
+	font-size: 30px;
+	margin: 20px;
+	text-shadow: none;
 }
 
-	
+#matchImage {
+	text-shadow: none;
+}
+
+img {
+	border: solid black;
+}
 
