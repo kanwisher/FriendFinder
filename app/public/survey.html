@@ -151,7 +151,7 @@
 
 $("select").on("change", function() {
 	$('html, body').animate({
-	    scrollTop: $(this).next().offset().top - 300
+	    scrollTop: $(this).next().offset().top - ($(this).next().height() / 2)
 	}, 700);
 });
 
@@ -182,7 +182,7 @@ $("#bio").one("click", function(){
 
 $("span").on("click", function() {
 	$('html, body').animate({
-	    scrollTop: $(this).next().offset().top - 300
+	    scrollTop: $(this).next().offset().top - ($(this).next().height() / 2)
 	}, 700);
 });
 
